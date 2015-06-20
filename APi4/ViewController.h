@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property (strong, nonatomic) NSMutableArray *array;
+- (IBAction)refreshButton:(id)sender;
 
 @end
 
